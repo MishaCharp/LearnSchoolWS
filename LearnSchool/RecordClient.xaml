@@ -1,0 +1,35 @@
+﻿<Window x:Class="LearnSchool.RecordClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LearnSchool"
+        mc:Ignorable="d"
+        Title="RecordClient" Loaded="WindowLoaded" Height="460" Width="600" ResizeMode="CanResizeWithGrip" MaxWidth="800px" MinWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70px"/>
+            <RowDefinition/>
+            <RowDefinition Height="50px"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="MainHeaderLabel" Content="LEARN SCHOOL" Width="800" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" FontFamily="Comic Sans MS" FontSize="40px" Grid.Row="0"/>
+        <Image Cursor="Hand" HorizontalAlignment="Left" Height="65px" Width="65px" VerticalAlignment="Center" Margin="4,0,0,0" Grid.Row="0" Source="school_logo.png"/>
+        <Label Content="Выберите услугу:" Grid.Row="1" Grid.Column="0" FontSize="22px" HorizontalAlignment="Right" Height="50" VerticalAlignment="Top"/>
+        <ComboBox Name="ServiceComboBox" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="1" Width="385" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50px"/>
+        <Label Content="Выберите клиента:" Grid.Row="1" Grid.Column="0" FontSize="22px" HorizontalAlignment="Right" Height="50" VerticalAlignment="Top" Margin="0,70,0,0"/>
+        <ComboBox Name="ClientComboBox" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="1" Width="385" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50px" Margin="0,70,0,0"/>
+        <Label Content="Комментарии к записи:" Grid.Row="1" Grid.Column="0" FontSize="22px" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Margin="0,140,0,0"/>
+        <TextBox Name="CommentTextBox" Grid.Column="1" FontSize="18px" Grid.Row="1" Width="385" VerticalAlignment="Top" HorizontalAlignment="Left" Height="100px" Margin="0,140,0,0"/>
+        <Label Content="Выбор даты и времени:" Grid.Row="1" Grid.Column="0" FontSize="22px" HorizontalAlignment="Right" Height="50" VerticalAlignment="Top" Margin="0,245,0,0"/>
+        <DatePicker x:Name="MyDateTime" HorizontalAlignment="Left" IsTodayHighlighted="True" FontSize="18px" Margin="0,252,0,0" Grid.Row="1" VerticalAlignment="Top" Height="37" Width="187" Grid.Column="1"/>
+        <TextBox Name="HoursTextBox" Grid.Column="1" FontSize="22px" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="37px" Width="50px" Margin="200,252,0,0" MaxLength="2"/>
+        <Label Content=":" Grid.Column="1" FontSize="28px" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50px" Width="20px" Margin="250,244,0,0"/>
+        <TextBox Name="MinuteTextBox" Grid.Column="1" FontSize="22px" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="37px" Width="50px" Margin="265,252,0,0" MaxLength="2"/>
+        <Button x:Name="AddRecordButton" Content="Записать" Grid.Column="0" Grid.Row="2" FontSize="18" Click="AddRecordButtonClick"/>
+        <Button x:Name="CancelButton" Content="Отмена" Grid.Column="1" Grid.Row="2" FontSize="18" Click="CancelButtonClick"/>
+    </Grid>
+</Window>

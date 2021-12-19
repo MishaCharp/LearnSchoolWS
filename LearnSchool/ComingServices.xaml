@@ -1,0 +1,20 @@
+﻿<Window x:Class="LearnSchool.ComingServices"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LearnSchool"
+        mc:Ignorable="d"
+        Title="ComingServices" Loaded="WindowLoaded" Height="400" Width="1300" ResizeMode="CanResizeWithGrip" MaxWidth="1300px" MinHeight="400">
+    <Grid>
+        <Grid.RowDefinitions>
+        <RowDefinition Height="70px"/>
+        <RowDefinition/>
+        <RowDefinition Height="40px"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="MainHeaderLabel" Content="LEARN SCHOOL" Width="1300" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" FontFamily="Comic Sans MS" FontSize="40px" Grid.Row="0"/>
+        <Image MouseLeftButtonDown="ImageMouseLeftButtonDown" Cursor="Hand" HorizontalAlignment="Left" Height="65px" Width="65px" VerticalAlignment="Center" Margin="4,0,0,0" Grid.Row="0" Source="school_logo.png"/>
+        <DataGrid Grid.Row="1" x:Name="MyDataGrid" FontSize="14"/>
+        <Button Grid.Row="2" Width="400" x:Name="BackButton" Content="Назад" FontSize="22" Click="BackButtonClick"/>
+    </Grid>
+</Window>

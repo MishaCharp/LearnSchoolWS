@@ -1,0 +1,41 @@
+﻿<Window x:Class="LearnSchool.NewService"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LearnSchool"
+        mc:Ignorable="d"
+        Title="NewService" Height="600" Width="500" WindowStyle="None" MaxHeight="600" MaxWidth="500" MinHeight="600" MinWidth="500" ResizeMode="NoResize" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="100px"/>
+            <RowDefinition Height="60px"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Style="{StaticResource StyleLabel2}" Content="Новая услуга" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="450" VerticalAlignment="Center" FontSize="28px"/>
+        <Label Style="{StaticResource StyleLabel2}" Content="Название услуги" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="0" Width="240" Height="40px" FontSize="20px"/>
+        <TextBox x:Name="TitleService" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Width="240" Height="40px" FontSize="20px"/>
+        <Label Style="{StaticResource StyleLabel2}" Content="Стоимость услуги" HorizontalContentAlignment="Center" Grid.Row="2" Grid.Column="0" Width="240" Height="40px" FontSize="20px"/>
+        <TextBox x:Name="CostService" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Width="240" Height="40px" FontSize="20px"/>
+        <Label Style="{StaticResource StyleLabel2}" Content="Длительность(мин)" HorizontalContentAlignment="Center" Grid.Row="3" Grid.Column="0" Width="240" Height="40px" FontSize="20px"/>
+        <TextBox x:Name="DurationService" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" Width="240" Height="40px" FontSize="20px"/>
+        <Label Style="{StaticResource StyleLabel2}" Content="Описание услуги" HorizontalContentAlignment="Center" Grid.Row="4" Grid.Column="0" Width="240" Height="40px" FontSize="20px"/>
+        <TextBox x:Name="DescriptionService" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" Width="240" Height="65px" FontSize="20px"/>
+        <Label Style="{StaticResource StyleLabel2}" Content="Скидка на услугу" HorizontalContentAlignment="Center" Grid.Row="5" Grid.Column="0" Width="240" Height="40px" FontSize="20px"/>
+        <TextBox x:Name="DiscountService" Grid.Row="5" Grid.Column="1" TextWrapping="Wrap" Width="240" Height="40px" FontSize="20px"/>
+        <Label Style="{StaticResource StyleLabel2}" Content="Выберите изображение" HorizontalContentAlignment="Center" Grid.Row="6" Grid.Column="0" Width="240" Height="40px" FontSize="20px" Margin="5,4,5,56"/>
+        <Image Grid.Row="6" Grid.Column="1" Width="130px"/>
+        <Button Content="Выбрать" Grid.Row="6" Grid.Column="0" Height="30px" Width="200px" Margin="25,47,25,23"/>
+        <Button x:Name="AddServiceButton" Click="AddServiceButtonClick" Content="Добавить услугу" Grid.Row="7" Grid.ColumnSpan="1" Height="30px" HorizontalAlignment="Left" Width="240px"/>
+        <Button x:Name="CancelButton" Click="CancelButtonClick" Content="Отмена" Grid.Row="7" Grid.Column="1" Height="30px" HorizontalAlignment="Right" Width="240px"/>
+    </Grid>
+</Window>

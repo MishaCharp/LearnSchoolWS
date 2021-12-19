@@ -1,0 +1,33 @@
+﻿<Window x:Class="LearnSchool.Services"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LearnSchool"
+        mc:Ignorable="d"
+        Title="Services" Closed="WindowClosed" Height="800" Width="800" ResizeMode="CanResizeWithGrip" MaxWidth="800px" MinHeight="400" Loaded="WindowLoaded">
+    <Grid x:Name="MyGrid" Style="{StaticResource TransparentBg}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70px"/>
+            <RowDefinition/>
+            <RowDefinition Height="80px"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <Label x:Name="MainHeaderLabel" Content="LEARN SCHOOL" Width="800" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" FontFamily="Comic Sans MS" FontSize="40px" Grid.Row="0"/>
+        <Image MouseLeftButtonDown="ImageMouseLeftButtonDown" Cursor="Hand" HorizontalAlignment="Left" Height="65px" Width="65px" VerticalAlignment="Center" Margin="4,0,0,0" Grid.Row="0" Source="school_logo.png"/>
+        <ScrollViewer x:Name="MyScroll"  Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid x:Name="MySecondGrid" Style="{StaticResource TransparentBg}">
+
+            </Grid>
+        </ScrollViewer>
+        <Slider x:Name="MySlider" Thumb.DragCompleted="MySliderDragCompleted" Grid.Row="0" TickFrequency="1" IsSnapToTickEnabled="True" Orientation="Horizontal" TickPlacement="BottomRight" Minimum="0" Maximum="1" Grid.Column="1" Value="0" Margin="192,36,39,2"/>
+        <Label x:Name="UserOrAdmin" Content="Режим пользователя" FontSize="16" Margin="192,2,0,34" Grid.Column="1" />
+        <Button x:Name="AddNewButton" VerticalAlignment="Top" Visibility="Visible" Click="AddNewButtonClick" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="2" FontSize="20px" Height="39px" Content="Добавить новую услугу"/>
+        <Button x:Name="AddNewServiceClient" VerticalAlignment="Top" Visibility="Visible" Click="AddNewServiceClientClick" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="2" Height="39px" FontSize="20px" Content="Записать клиента"/>
+        <Button x:Name="ComingRecords" Visibility="Visible" Click="ComingRecordsClick" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="2" VerticalAlignment="Bottom" Height="39px" FontSize="20px" Content="Ближайшие записи"/>
+    </Grid>
+</Window>
